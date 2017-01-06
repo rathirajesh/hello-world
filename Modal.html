@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+
+	<!-- Button trigger modal -->
+	<button class="rect" onclick="showsignup();">
+		Launch from BUTTON
+	</button>
+
+	<!-- Button trigger modal -->
+	<a  class="rect" href="#"
+		data-toggle="modal" 
+		data-target="#myModal">
+		Launch from A
+	</a>
+
+	<!-- Button trigger modal -->
+	<div class="rect"
+			data-toggle="modal" 
+			data-target="#myModal">
+		Launch from DIV
+	</div>
+
+	<!-- Button trigger modal -->
+	<div class="rect clickable"
+			data-toggle="modal" 
+			data-target="#myModal">
+		Clickable DIV
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog"
+		 aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="bootstrap.min.js"></script>
+	
+<script>	
+	function showsignup(){
+		$("#myModal").modal("show");
+	}
+	
+	$(document).ready(function(){
+		if(2>1){
+			showsignup();
+			console.log("true");
+		}
+	});
+</script>
+<style>
+	.rect {
+		width: 200px;
+		height: 50px;
+		display: block;
+		border: 1px solid #C4A400;
+		background: #FFEF34;
+		text-align: left;
+		margin: 5px;
+		padding: 5px;
+		font-size: 20px;
+		line-height: 50px;
+		color: black;
+	}
+	.clickable {
+		cursor: pointer;
+	}
+</style>
+
+</body>
+</html>
